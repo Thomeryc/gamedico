@@ -1,0 +1,14 @@
+#Global Var
+Dico = ["A","D","B","Z"]
+a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 #Inutile mais pratique pour avoir la correspondance lettre = position
+Occurence = [a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t,u,v,w,x,y,z] #Liste qui recense les occurences de chaque lettres
+Lettre = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"] #Alphabet latin pouvant être utilisé par le joueur & le dico
+taille,taille2 = len(Dico),len(Lettre)
+
+#Fonction qui compte le nombre de fois que chaque lettre est présente, et donc peut être utilisée par le joueur
+def ComptOccur():
+    for i in range(0,taille):
+        for j in range(0,taille2):
+            if Dico[i-1] == Lettre[j-1]:
+                Occurence[j-1] +=1
+    return(Occurence)
